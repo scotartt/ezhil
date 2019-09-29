@@ -13,19 +13,30 @@
 		{{ if isset .Data "Term" }}
 			<h1>Entries tagged - "{{ .Data.Term }}"</h1>
 		{{ else }}
-			<h1 class="page-title">All articles</h1>
+			<h1 class="page-title">items</h1>
 		{{ end }}
 
-		<ul class="posts">
+		<ol class="posts">
 			{{- range .Data.Pages -}}
 			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
 			{{- else -}}
 			<li class="post">
-				<a href="{{ .RelPermalink }}">{{.Title}}</a> <span class="meta">{{ dateFormat "2006-01-02 15:04:05 -Z0700" .Date }}</span>
+				<a href="{{ .RelPermalink }}">{{.Title}}</a>
+				<span class="description">
+					&mdash;
+					{{ if isset .Params "description" }}
+					{{ .Description }}
+					{{ else if gt (len .RawContent) 80 }}
+					{{ slicestr .RawContent 0 80 }}...
+					{{ else }}
+					{{ .RawContent }}
+					{{ end }}
+				</span>
+				<span class="meta">({{ dateFormat "2006-01-02 15:04 Z0700" .Date }})</span>
 			</li>
 			{{- end -}}
 			{{- end -}}
-		</ul>
+		</ol>
 	</div>
 
 	{{ partial "footer.html" . }}
