@@ -1,15 +1,18 @@
 body {
   font-family: "ubuntu", "Helvetica", sans-serif;
   font-weight: 300;
-	color: #333;
+	color: rgba(255,255,255,1);
 	line-height: 1.6;
-	font-size: 16px;
+	font-size: 1.4rem;
+  background-color:rgba(33,33,33,1);
+  background-image:url('/resources/pattern.png');
+  background-repeat:repeat;
 }
 
 
 
 html,button,input,select,textarea {
-    color: #222
+    color: rgba(200,200,200,1);
 }
 
 ::-moz-selection {
@@ -26,7 +29,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #333;
     margin: 1rem 0;
     padding: 0
 }
@@ -62,7 +65,7 @@ blockquote {
     font-size: 1.4rem;
     font-family: Georgia,bitstream charter,serif;
     border-left: 3px solid;
-    border-color: #a00;
+    border-color: rgba(100,230,0,1);
     padding-left: 20px
 }
 
@@ -75,19 +78,19 @@ blockquote em {
     font-weight: 600;
 }
 
-a,a:hover {
-    color: #393;
-    text-decoration: none
+a {
+    color: rgba(100,230,0,1);
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: raleway, "Helvetica", sans-serif;
     line-height: 1.2;
-    color: #333;
+    color: rgba(100,230,0,1);
     font-weight: 100;
     text-transform: lowercase;
 }
@@ -146,7 +149,7 @@ ul.flat {
 ul.flat li {
     display: inline-block;
     list-style: none;
-	margin-left: 0
+    margin-left: 0
 }
 
 .prevent-collapse {
@@ -217,7 +220,7 @@ ul {
 
 .header nav {
 	margin-top: 20px;
-	border-top: 1px solid #f4f4f4;
+	border-top: 1px solid rgba(67,154,0,1);
 }
 
 .header nav ul,
@@ -259,9 +262,9 @@ ul {
 
 .section .section-header {
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 500;
 	text-transform: uppercase;
-	color: #999;
+	color: rgba(155,205,155,1);
   margin-top: 20px;
 	margin-bottom: 20px;
 	letter-spacing: 0.25em;
@@ -275,7 +278,7 @@ ul {
 .post .post-header .meta,
 .list .posts .post .meta {
 	font-size: 0.725rem;
-	color: #999;
+	color: rgba(155,205,155,1);
 	margin-bottom: 4px;
 }
 
@@ -304,8 +307,8 @@ ul {
 .footer {
 	text-align: right;
 	font-size: 0.75em;
-	color: #999;
-	border-top: 1px solid #f4f4f4;
+	color: rgba(155,205,155,1);
+	border-top: 1px solid rgba(100,230,0,1);
   padding: 20px 0;
   margin-top: 40px;
   max-width: 80%;
@@ -355,6 +358,7 @@ ul {
 	body {
 		padding: 5px;
     font-size: 0.8rem;
+    background-image: none;
 	}
   .header h1 {
     font-size: 2rem;
@@ -367,7 +371,7 @@ ul {
   }
   .header nav {
   	margin: 0;
-  	border-top: 1px solid #f4f4f4;
+  	border-top: 1px solid rgba(100,230,0,1);
   }
   .header {
     margin: 0;
@@ -405,8 +409,6 @@ ul {
 	h4 {
 		font-size: 0.8rem
 	}
-
-
 
   blockquote {
     font-size: 0.8rem;
